@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="spr.beans">
+    <class name="MedicineMenu" table="medicinemenutable">
+        <id name="medId">
+            <generator class="native"/>
+        </id>
+        <property name="patientId" column="patientId"/>
+        <property name="medicineName" column="MedicineName"/>
+        <property name="medicineDescription" column="MedicineDescription"/>
+        <property name="expiryDate" column="ExpiryDate"/>
+        <property name="cost" column="cost"/>
+        <property name="availability" column="Availability"/>
+        <property name="wardNo" column="WardNo"/>
+        <property name="orderStatus" column="Status"/>
+        
+    </class>
+    
+</hibernate-mapping>

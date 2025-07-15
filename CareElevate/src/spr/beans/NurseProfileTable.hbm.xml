@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="spr.beans">
+    <class name="NurseProfileTable" table="nurseprofiletable1">
+        <id name="nurseId" column="nurseId"/>
+        <property name="password" column="password"/>
+        <property name="fullName" column="FullName1"/>
+        <property name="emailId" column="EmailId1"/>
+        <property name="address" column="Address1"/>
+        <property name="qualification" column="Qualification1"/>
+        <property name="experience" column="Experience1"/>
+        <property name="gender" column="Gender1"/>
+        <property name="dob" column="DOB1"/>
+        <property name="contactNo" column="Contact1"/>
+        
+    </class>
+    
+</hibernate-mapping>
