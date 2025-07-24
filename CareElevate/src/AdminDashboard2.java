@@ -120,34 +120,37 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         jScrollPane10 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
         jPanel6 = new javax.swing.JPanel();
-        jPanel28 = new javax.swing.JPanel();
-        jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
-        jLabel66 = new javax.swing.JLabel();
-        jLabel67 = new javax.swing.JLabel();
-        jLabel68 = new javax.swing.JLabel();
-        jLabel69 = new javax.swing.JLabel();
-        jLabel70 = new javax.swing.JLabel();
-        jLabel71 = new javax.swing.JLabel();
-        jLabel72 = new javax.swing.JLabel();
-        jLabel73 = new javax.swing.JLabel();
-        jLabel74 = new javax.swing.JLabel();
-        jTextField29 = new javax.swing.JTextField();
-        jTextField30 = new javax.swing.JTextField();
-        jTextField31 = new javax.swing.JTextField();
-        jTextField32 = new javax.swing.JTextField();
-        jTextField33 = new javax.swing.JTextField();
-        jTextField34 = new javax.swing.JTextField();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea5 = new javax.swing.JTextArea();
-        jPasswordField7 = new javax.swing.JPasswordField();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
-        jDatePicker5 = new org.jdatepicker.JDatePicker();
-        jButton7 = new javax.swing.JButton();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        jTextArea6 = new javax.swing.JTextArea();
+        jPanel42 = new javax.swing.JPanel();
+        jLabel91 = new javax.swing.JLabel();
+        jLabel190 = new javax.swing.JLabel();
+        jLabel92 = new javax.swing.JLabel();
+        jLabel191 = new javax.swing.JLabel();
+        jLabel192 = new javax.swing.JLabel();
+        jLabel193 = new javax.swing.JLabel();
+        jLabel194 = new javax.swing.JLabel();
+        jLabel195 = new javax.swing.JLabel();
+        jLabel196 = new javax.swing.JLabel();
+        jLabel198 = new javax.swing.JLabel();
+        jLabel199 = new javax.swing.JLabel();
+        jLabel200 = new javax.swing.JLabel();
+        jTextField52 = new javax.swing.JTextField();
+        jTextField53 = new javax.swing.JTextField();
+        jTextField54 = new javax.swing.JTextField();
+        jTextField55 = new javax.swing.JTextField();
+        jTextField56 = new javax.swing.JTextField();
+        jTextField57 = new javax.swing.JTextField();
+        jTextField58 = new javax.swing.JTextField();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        jTextArea7 = new javax.swing.JTextArea();
+        jPasswordField13 = new javax.swing.JPasswordField();
+        jRadioButton11 = new javax.swing.JRadioButton();
+        jRadioButton12 = new javax.swing.JRadioButton();
+        jDatePicker6 = new org.jdatepicker.JDatePicker();
+        jButton23 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jLabel201 = new javax.swing.JLabel();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        jTextArea8 = new javax.swing.JTextArea();
         jPanel7 = new javax.swing.JPanel();
         jPanel29 = new javax.swing.JPanel();
         jLabel75 = new javax.swing.JLabel();
@@ -429,13 +432,17 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         jPasswordField12 = new javax.swing.JPasswordField();
         jButton12 = new javax.swing.JButton();
         jPanel39 = new javax.swing.JPanel();
-        jPanel42 = new javax.swing.JPanel();
-        jLabel90 = new javax.swing.JLabel();
-        jLabel91 = new javax.swing.JLabel();
-        jLabel92 = new javax.swing.JLabel();
-        jTextField40 = new javax.swing.JTextField();
-        jPasswordField13 = new javax.swing.JPasswordField();
-        jButton13 = new javax.swing.JButton();
+        jPanel55 = new javax.swing.JPanel();
+        jLabel185 = new javax.swing.JLabel();
+        jLabel186 = new javax.swing.JLabel();
+        jLabel187 = new javax.swing.JLabel();
+        jTextField50 = new javax.swing.JTextField();
+        jPasswordField16 = new javax.swing.JPasswordField();
+        jButton22 = new javax.swing.JButton();
+        jLabel188 = new javax.swing.JLabel();
+        jTextField51 = new javax.swing.JTextField();
+        jLabel189 = new javax.swing.JLabel();
+        jPasswordField17 = new javax.swing.JPasswordField();
         jPanel40 = new javax.swing.JPanel();
         jPanel43 = new javax.swing.JPanel();
         jLabel93 = new javax.swing.JLabel();
@@ -604,13 +611,10 @@ public class AdminDashboard2 extends javax.swing.JFrame {
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Patient Id", "FullName", "Ailment", "Contact"
             }
         ));
         jScrollPane10.setViewportView(jTable3);
@@ -621,160 +625,215 @@ public class AdminDashboard2 extends javax.swing.JFrame {
 
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel28.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel63.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel63.setText("PATIENT PROFILE UPDATION FORM");
-        jPanel28.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, -1, -1));
-
-        jLabel64.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel64.setText("ID:");
-        jPanel28.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 170, -1));
-
-        jLabel65.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel65.setText("FULL NAME:");
-        jPanel28.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 170, -1));
-
-        jLabel66.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel66.setText("EMAIL ID:");
-        jPanel28.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 170, -1));
-
-        jLabel67.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel67.setText("ADDRESS:");
-        jPanel28.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 170, -1));
-
-        jLabel68.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel68.setText("AILMENT:");
-        jPanel28.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 170, -1));
-
-        jLabel69.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel69.setText("NATIONALITY:");
-        jPanel28.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 170, -1));
-
-        jLabel70.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel70.setText("PASSWORD:");
-        jPanel28.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 60, 170, -1));
-
-        jLabel71.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel71.setText("GENDER:");
-        jPanel28.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 110, 170, -1));
-
-        jLabel72.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel72.setText("DOB:");
-        jPanel28.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 160, 170, -1));
-
-        jLabel73.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel73.setText("CONTACT NO:");
-        jPanel28.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 340, 170, -1));
-
-        jLabel74.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel74.setText("DESCRIPTION:");
-        jPanel28.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 210, 170, -1));
-
-        jTextField29.setText("ENTER PATIENT ID HERE");
-        jTextField29.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField29MouseClicked(evt);
+        jPanel42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel42.setEnabled(false);
+        jPanel42.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jPanel42FocusGained(evt);
             }
         });
-        jPanel28.add(jTextField29, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 430, 30));
+        jPanel42.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField30.setText("ENTER FULL NAME HERE");
-        jTextField30.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField30MouseClicked(evt);
+        jLabel91.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel91.setText("PATIENT PROFILE UPDATION FORM");
+        jPanel42.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, -1, -1));
+
+        jLabel190.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel190.setText("ENTER ID TO FETCH RECORD:");
+        jPanel42.add(jLabel190, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 250, -1));
+
+        jLabel92.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel92.setText("ID:");
+        jPanel42.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 170, -1));
+
+        jLabel191.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel191.setText("FULL NAME:");
+        jPanel42.add(jLabel191, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 170, -1));
+
+        jLabel192.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel192.setText("EMAIL ID:");
+        jPanel42.add(jLabel192, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 170, -1));
+
+        jLabel193.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel193.setText("ADDRESS:");
+        jPanel42.add(jLabel193, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 170, -1));
+
+        jLabel194.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel194.setText("AILMENT:");
+        jPanel42.add(jLabel194, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 170, -1));
+
+        jLabel195.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel195.setText("NATIONALITY:");
+        jPanel42.add(jLabel195, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 170, -1));
+
+        jLabel196.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel196.setText("PASSWORD:");
+        jPanel42.add(jLabel196, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 60, 170, -1));
+
+        jLabel198.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel198.setText("GENDER:");
+        jPanel42.add(jLabel198, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 100, 170, -1));
+
+        jLabel199.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel199.setText("DOB:");
+        jPanel42.add(jLabel199, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 150, 170, -1));
+
+        jLabel200.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel200.setText("CONTACT NO:");
+        jPanel42.add(jLabel200, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, 170, -1));
+
+        jTextField52.setText("ENTER ID OF RECORD TO BE FETCHED");
+        jTextField52.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTextField52FocusGained(evt);
             }
         });
-        jPanel28.add(jTextField30, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 430, 30));
-
-        jTextField31.setText("ENTER EMAIL ID HERE");
-        jTextField31.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTextField52.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField31MouseClicked(evt);
+                jTextField52MouseClicked(evt);
             }
         });
-        jPanel28.add(jTextField31, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 430, 30));
+        jPanel42.add(jTextField52, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 60, 240, 30));
 
-        jTextField32.setText("ENTER PATIENT ILLNESS HERE.");
-        jTextField32.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField32MouseClicked(evt);
+        jTextField53.setEditable(false);
+        jTextField53.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTextField53FocusGained(evt);
             }
         });
-        jPanel28.add(jTextField32, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 430, 30));
-
-        jTextField33.setText("ENTER PATIENT NATIONALITY  HERE");
-        jTextField33.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTextField53.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField33MouseClicked(evt);
+                jTextField53MouseClicked(evt);
             }
         });
-        jPanel28.add(jTextField33, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 430, 30));
+        jPanel42.add(jTextField53, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 430, 30));
 
-        jTextField34.setText("ENTER CONTACT NO HERE");
-        jTextField34.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTextField54.setEnabled(false);
+        jTextField54.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField34MouseClicked(evt);
+                jTextField54MouseClicked(evt);
             }
         });
-        jPanel28.add(jTextField34, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 340, 360, 30));
+        jPanel42.add(jTextField54, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 430, 30));
 
-        jTextArea5.setColumns(20);
-        jTextArea5.setRows(5);
-        jTextArea5.setText("ENTER ADDRESS HERE");
-        jTextArea5.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTextField55.setEnabled(false);
+        jTextField55.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextArea5MouseClicked(evt);
+                jTextField55MouseClicked(evt);
             }
         });
-        jScrollPane5.setViewportView(jTextArea5);
+        jPanel42.add(jTextField55, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 430, 30));
 
-        jPanel28.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 430, -1));
-
-        jPasswordField7.setText("ENTER PASSWORD HERE");
-        jPasswordField7.setEchoChar('\u0000');
-        jPasswordField7.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTextField56.setEnabled(false);
+        jTextField56.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPasswordField7MouseClicked(evt);
+                jTextField56MouseClicked(evt);
             }
         });
-        jPanel28.add(jPasswordField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 60, 360, 30));
+        jPanel42.add(jTextField56, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, 430, 30));
 
-        jRadioButton9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jRadioButton9.setText("MALE");
-        jPanel28.add(jRadioButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 110, -1, -1));
+        jTextField57.setEnabled(false);
+        jTextField57.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField57MouseClicked(evt);
+            }
+        });
+        jPanel42.add(jTextField57, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 430, 30));
 
-        jRadioButton10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jRadioButton10.setText("FEMALE");
-        jPanel28.add(jRadioButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 110, -1, -1));
+        jTextField58.setEnabled(false);
+        jTextField58.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField58MouseClicked(evt);
+            }
+        });
+        jPanel42.add(jTextField58, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 300, 360, 30));
 
-        jDatePicker5.setToolTipText("10 july 2005");
-        jPanel28.add(jDatePicker5, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 160, 360, 20));
+        jTextArea7.setColumns(20);
+        jTextArea7.setRows(5);
+        jTextArea7.setEnabled(false);
+        jTextArea7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextArea7MouseClicked(evt);
+            }
+        });
+        jScrollPane13.setViewportView(jTextArea7);
 
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton7.setText("UPDATE");
-        jButton7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        jPanel42.add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 430, -1));
+
+        jPasswordField13.setEchoChar('\u0000');
+        jPasswordField13.setEnabled(false);
+        jPasswordField13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPasswordField13MouseClicked(evt);
+            }
+        });
+        jPanel42.add(jPasswordField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 60, 360, 30));
+
+        jRadioButton11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRadioButton11.setText("MALE");
+        jRadioButton11.setEnabled(false);
+        jRadioButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRadioButton11MouseClicked(evt);
+            }
+        });
+        jPanel42.add(jRadioButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 100, -1, -1));
+
+        jRadioButton12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRadioButton12.setText("FEMALE");
+        jRadioButton12.setEnabled(false);
+        jRadioButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRadioButton12MouseClicked(evt);
+            }
+        });
+        jPanel42.add(jRadioButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 100, -1, -1));
+
+        jDatePicker6.setToolTipText("10 july 2005");
+        jDatePicker6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jDatePicker6MouseClicked(evt);
+            }
+        });
+        jPanel42.add(jDatePicker6, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 150, 360, 20));
+
+        jButton23.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton23.setText("FETCH");
+        jButton23.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                jButton23ActionPerformed(evt);
             }
         });
-        jPanel28.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 410, 120, -1));
+        jPanel42.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 60, 90, -1));
 
-        jTextArea6.setColumns(20);
-        jTextArea6.setRows(5);
-        jTextArea6.setText("ENTER PATIENT DESCRIPTION HERE");
-        jTextArea6.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton13.setText("UPDATE");
+        jButton13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        jPanel42.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 350, 120, -1));
+
+        jLabel201.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel201.setText("DESCRIPTION:");
+        jPanel42.add(jLabel201, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 200, 170, -1));
+
+        jTextArea8.setColumns(20);
+        jTextArea8.setRows(5);
+        jTextArea8.setEnabled(false);
+        jTextArea8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextArea6MouseClicked(evt);
+                jTextArea8MouseClicked(evt);
             }
         });
-        jScrollPane6.setViewportView(jTextArea6);
+        jScrollPane14.setViewportView(jTextArea8);
 
-        jPanel28.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 210, 360, -1));
+        jPanel42.add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 200, 360, -1));
 
-        jPanel6.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 550));
+        jPanel6.add(jPanel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 550));
 
         jTabbedPane2.addTab("UPDATE PROFILE\n", jPanel6);
 
@@ -831,7 +890,7 @@ public class AdminDashboard2 extends javax.swing.JFrame {
 
         jPanel3.add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 650));
 
-        jTabbedPane1.addTab("PATIENT PROFILE\n\n", jPanel3);
+        jTabbedPane1.addTab("PATIENT PROFILE  ", jPanel3);
 
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1920,6 +1979,11 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
         jTextArea2.setText("ENTER ADDRESS HERE");
+        jTextArea2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextArea2MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTextArea2);
 
         jPanel23.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 430, -1));
@@ -2353,50 +2417,88 @@ public class AdminDashboard2 extends javax.swing.JFrame {
 
         jPanel39.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel42.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel42.setForeground(new java.awt.Color(153, 153, 153));
-        jPanel42.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel55.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel55.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel55.setForeground(new java.awt.Color(153, 153, 153));
+        jPanel55.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel90.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel90.setText("<html>\n<h1>PHARMACY OPERATOR PROFILE UPDATION FORM </h1>\n</html>");
-        jPanel42.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, -1, -1));
+        jLabel185.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel185.setText("<html>\n<h1>PHARMACY OPERATOR PROFILE UPDATION FORM </h1>\n</html>");
+        jPanel55.add(jLabel185, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jLabel91.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel91.setText("PHARMACY OPERATOR ID:");
-        jPanel42.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, -1, -1));
+        jLabel186.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel186.setText("PHARMACY OPERATOR OLD ID:");
+        jPanel55.add(jLabel186, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 280, -1));
 
-        jLabel92.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel92.setText("PHARMACY OPERATOR PASSWORD:");
-        jPanel42.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
+        jLabel187.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel187.setText("PHARMACY OPERATOR OLD PASSWORD:");
+        jPanel55.add(jLabel187, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
-        jTextField40.setText("ENTER CANTEEN OPERATOR ID HERE");
-        jTextField40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField40.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTextField50.setText("ENTER CANTEEN OPERATOR  OLD ID HERE");
+        jTextField50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField50.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField40MouseClicked(evt);
+                jTextField50MouseClicked(evt);
             }
         });
-        jPanel42.add(jTextField40, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 540, 30));
-
-        jPasswordField13.setText("ENTER PASSWORD HERE");
-        jPasswordField13.setEchoChar('\u0000');
-        jPasswordField13.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPasswordField13MouseClicked(evt);
-            }
-        });
-        jPanel42.add(jPasswordField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, 540, 30));
-
-        jButton13.setText("<html>\n<h2>UPDATE</h2>\n</html>");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        jTextField50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                jTextField50ActionPerformed(evt);
             }
         });
-        jPanel42.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 290, -1, 40));
+        jPanel55.add(jTextField50, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, 280, 30));
 
-        jPanel39.add(jPanel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 530));
+        jPasswordField16.setText("ENTER OLD  PASSWORD HERE");
+        jPasswordField16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPasswordField16.setEchoChar('\u0000');
+        jPasswordField16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPasswordField16MouseClicked(evt);
+            }
+        });
+        jPanel55.add(jPasswordField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, 220, 30));
+
+        jButton22.setText("<html>\n<h2>UPDATE</h2>\n</html>");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+        jPanel55.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, 40));
+
+        jLabel188.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel188.setText("PHARMACY OPERATOR NEW ID:");
+        jPanel55.add(jLabel188, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 290, -1));
+
+        jTextField51.setText("ENTER CANTEEN OPERATOR NEW ID HERE");
+        jTextField51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField51.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField51MouseClicked(evt);
+            }
+        });
+        jTextField51.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField51ActionPerformed(evt);
+            }
+        });
+        jPanel55.add(jTextField51, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 280, 30));
+
+        jLabel189.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel189.setText("PHARMACY OPERATOR NEW PASSWORD:");
+        jPanel55.add(jLabel189, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+
+        jPasswordField17.setText("ENTER NEW PASSWORD HERE");
+        jPasswordField17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPasswordField17.setEchoChar('\u0000');
+        jPasswordField17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPasswordField17MouseClicked(evt);
+            }
+        });
+        jPanel55.add(jPasswordField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 250, 220, 30));
+
+        jPanel39.add(jPanel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 530));
 
         jTabbedPane7.addTab("UPDATE PROFILE", jPanel39);
 
@@ -2628,7 +2730,7 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         NurseProfileTable nurseprofiletable=new NurseProfileTable(id,password,fullName,emailId,address,qualification,experience,gender,dob,contactNo);
         dao.insertNurseProfile(nurseprofiletable);
         JOptionPane.showMessageDialog(this,"Record Successfully inserted");
-        new AdminDashboard().setVisible(true);
+        new AdminDashboard2().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -2834,46 +2936,6 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jTextField29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField29MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField29MouseClicked
-
-    private void jTextField30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField30MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField30MouseClicked
-
-    private void jTextField31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField31MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField31MouseClicked
-
-    private void jTextField32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField32MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField32MouseClicked
-
-    private void jTextField33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField33MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField33MouseClicked
-
-    private void jTextField34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField34MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField34MouseClicked
-
-    private void jTextArea5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea5MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextArea5MouseClicked
-
-    private void jPasswordField7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField7MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField7MouseClicked
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jTextArea6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea6MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextArea6MouseClicked
-
     private void jTextField35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField35MouseClicked
         jTextField35.setText("");
         jTextField35.setForeground(Color.BLACK);
@@ -2996,18 +3058,6 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         dao.insertPharmacyOperatorProfile(pharmacyoperatorlogintable);
         JOptionPane.showMessageDialog(this,"Pharmacy Operator profile created successfully");
     }//GEN-LAST:event_jButton12ActionPerformed
-
-    private void jTextField40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField40MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField40MouseClicked
-
-    private void jPasswordField13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField13MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField13MouseClicked
-
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jTextField41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField41MouseClicked
         jTextField41.setText("");
@@ -3212,6 +3262,8 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         String contactNo=jTextField19.getText();
         dao.updateDoctorProfile(id,password,fullName,emailId,address,qualification,experience,achievements,post,gender,DOB,contactNo);
         JOptionPane.showMessageDialog(this,"Record Updated successfully");
+        new AdminDashboard2().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jPanel24FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPanel24FocusGained
@@ -3248,7 +3300,8 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         String experience=jTextField27.getText();
         dao.updateNurseProfile(id, password, fullName, emailId, address, qualification, experience, gender, DOB, contactNo);
         JOptionPane.showMessageDialog(this,"Record Updated Successfully");
-        jPanel27.setVisible(true);
+        new AdminDashboard2().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jTextArea4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea4MouseClicked
@@ -3356,7 +3409,8 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField37ActionPerformed
 
     private void jTextField49MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField49MouseClicked
-        // TODO add your handling code here:
+        jTextField49.setText("");
+        jTextField49.setForeground(Color.BLACK);
     }//GEN-LAST:event_jTextField49MouseClicked
 
     private void jTextField49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField49ActionPerformed
@@ -3368,6 +3422,200 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         jPasswordField15.setEchoChar('*');
         jPasswordField15.setForeground(Color.BLACK);
     }//GEN-LAST:event_jPasswordField15MouseClicked
+
+    private void jTextField50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField50MouseClicked
+        jTextField50.setText("");
+        jTextField50.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField50MouseClicked
+
+    private void jTextField50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField50ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField50ActionPerformed
+
+    private void jPasswordField16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField16MouseClicked
+        jPasswordField16.setText("");
+        jPasswordField16.setEchoChar('*');
+        jPasswordField16.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jPasswordField16MouseClicked
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        ApplicationContext context = new ClassPathXmlApplicationContext("/SpringXmlConfig.xml");
+        LogicalCodeDAO dao=(LogicalCodeDAO)context.getBean("firstStep");
+        String oldId=jTextField37.getText();
+        String newId=jTextField49.getText();
+        String oldPassword=new String(jPasswordField10.getPassword());
+        String newPassword=new String(jPasswordField15.getPassword());
+        boolean result=dao.checkPharmacyOperatorLogin(oldId, oldPassword);
+        if(result){
+            dao.updatePharmacyOperatorProfile(newId,newPassword);
+            JOptionPane.showMessageDialog(this,"Profile Updated Successfully");
+        }
+        else{
+            JOptionPane.showMessageDialog(this,"No record exists.\n Please check your credentials again");
+        }        
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jTextField51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField51MouseClicked
+        jTextField51.setText("");
+        jTextField51.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField51MouseClicked
+
+    private void jTextField51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField51ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField51ActionPerformed
+
+    private void jPasswordField17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField17MouseClicked
+        jPasswordField16.setText("");
+        jPasswordField16.setEchoChar('*');
+        jPasswordField16.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jPasswordField17MouseClicked
+
+    private void jTextArea2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea2MouseClicked
+        jTextArea2.setText("");
+        jTextArea2.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextArea2MouseClicked
+
+    private void jTextField52FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField52FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField52FocusGained
+
+    private void jTextField52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField52MouseClicked
+        jTextField52.setText("");
+        jTextField52.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField52MouseClicked
+
+    private void jTextField53FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField53FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField53FocusGained
+
+    private void jTextField53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField53MouseClicked
+        jTextField53.setText("");
+        jTextField53.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField53MouseClicked
+
+    private void jTextField54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField54MouseClicked
+        jTextField54.setText("");
+        jTextField54.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField54MouseClicked
+
+    private void jTextField55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField55MouseClicked
+        jTextField55.setText("");
+        jTextField55.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField55MouseClicked
+
+    private void jTextField56MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField56MouseClicked
+        jTextField56.setText("");
+        jTextField56.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField56MouseClicked
+
+    private void jTextField57MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField57MouseClicked
+        jTextField57.setText("");
+        jTextField57.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField57MouseClicked
+
+    private void jTextField58MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField58MouseClicked
+        jTextField58.setText("");
+        jTextField58.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField58MouseClicked
+
+    private void jTextArea7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea7MouseClicked
+        jTextArea7.setText("");
+        jTextArea7.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextArea7MouseClicked
+
+    private void jPasswordField13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField13MouseClicked
+        jPasswordField13.setText("");
+        jPasswordField13.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jPasswordField13MouseClicked
+
+    private void jRadioButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton11MouseClicked
+
+    private void jRadioButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton12MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton12MouseClicked
+
+    private void jDatePicker6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDatePicker6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jDatePicker6MouseClicked
+
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        String id =jTextField52.getText();
+        ApplicationContext context = new ClassPathXmlApplicationContext("/SpringXmlConfig.xml");
+        LogicalCodeDAO dao = (LogicalCodeDAO)context.getBean("firstStep");
+        List<PatientProfileTable> list = dao.getPatientProfileInfo(id);
+        jTextField53.setEnabled(true);
+        jTextField54.setEnabled(true);
+        jTextField55.setEnabled(true);
+        jTextField56.setEnabled(true);
+        jTextField57.setEnabled(true);
+        jTextField58.setEnabled(true);
+        jTextArea7.setEnabled(true);
+        jTextArea8.setEnabled(true);
+        jPasswordField13.setEnabled(true);
+        jRadioButton11.setEnabled(true);
+        jRadioButton12.setEnabled(true);
+        jDatePicker6.setEnabled(true);
+        for(PatientProfileTable data:list){
+            jTextField53.setText(data.getPatientId());
+            jTextField54.setText(data.getFullName());
+            jTextField55.setText(data.getEmailId());
+            jTextField56.setText(data.getAilment());
+            jTextField57.setText(data.getNationality());
+            jTextField58.setText(data.getContactNo());
+            jTextArea7.setText(data.getAddress());
+            jTextArea8.setText(data.getDescription());
+            jPasswordField13.setText(data.getPassword());
+            if(data.getGender().equalsIgnoreCase("male")){
+                jRadioButton11.setSelected(true);
+            }
+            else{
+                jRadioButton12.setSelected(true);
+            }
+            jDatePicker6.setToolTipText(data.getDob());
+        }
+    }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        ApplicationContext context = new ClassPathXmlApplicationContext("/SpringXmlConfig.xml");
+        LogicalCodeDAO dao = (LogicalCodeDAO)context.getBean("firstStep");
+        String id=jTextField53.getText();
+        String fullName=jTextField54.getText();
+        String emailId=jTextField55.getText();
+        String address=jTextArea7.getText();
+        String ailment=jTextField56.getText();
+        String nationality=jTextField57.getText();
+        String password=new String(jPasswordField13.getPassword());
+        String gender=null;
+        if(jRadioButton11.isSelected()){
+            gender=jRadioButton5.getText();
+        }
+        else if(jRadioButton12.isSelected()){
+            gender=jRadioButton6.getText();
+        }
+        else{
+            JOptionPane.showMessageDialog(this,"Please select the gender of the candidate");
+        }
+        DateModel dob=jDatePicker6.getModel();
+        String DOB=dob.getDay()+""+dob.getMonth()+""+dob.getYear();
+        String description=jTextArea8.getText();
+        String contactNo=jTextField58.getText();
+        dao.updatePatientProfile(id,password,fullName,emailId,address,ailment,nationality,description,gender,DOB,contactNo);
+        JOptionPane.showMessageDialog(this,"Record Updated successfully");
+        new AdminDashboard2().setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jPanel42FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPanel42FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel42FocusGained
+
+    private void jTextArea8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea8MouseClicked
+        jTextArea8.setText("");
+        jTextArea8.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextArea8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -3400,11 +3648,12 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
@@ -3415,7 +3664,7 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private org.jdatepicker.JDatePicker jDatePicker2;
     private org.jdatepicker.JDatePicker jDatePicker3;
     private org.jdatepicker.JDatePicker jDatePicker4;
-    private org.jdatepicker.JDatePicker jDatePicker5;
+    private org.jdatepicker.JDatePicker jDatePicker6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -3511,9 +3760,25 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel182;
     private javax.swing.JLabel jLabel183;
     private javax.swing.JLabel jLabel184;
+    private javax.swing.JLabel jLabel185;
+    private javax.swing.JLabel jLabel186;
+    private javax.swing.JLabel jLabel187;
+    private javax.swing.JLabel jLabel188;
+    private javax.swing.JLabel jLabel189;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel190;
+    private javax.swing.JLabel jLabel191;
+    private javax.swing.JLabel jLabel192;
+    private javax.swing.JLabel jLabel193;
+    private javax.swing.JLabel jLabel194;
+    private javax.swing.JLabel jLabel195;
+    private javax.swing.JLabel jLabel196;
+    private javax.swing.JLabel jLabel198;
+    private javax.swing.JLabel jLabel199;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel200;
+    private javax.swing.JLabel jLabel201;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -3560,19 +3825,7 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
-    private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel67;
-    private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
-    private javax.swing.JLabel jLabel73;
-    private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
@@ -3590,7 +3843,6 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel93;
@@ -3629,7 +3881,6 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
-    private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
@@ -3659,6 +3910,7 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel52;
     private javax.swing.JPanel jPanel53;
     private javax.swing.JPanel jPanel54;
+    private javax.swing.JPanel jPanel55;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
@@ -3670,16 +3922,18 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField13;
     private javax.swing.JPasswordField jPasswordField14;
     private javax.swing.JPasswordField jPasswordField15;
+    private javax.swing.JPasswordField jPasswordField16;
+    private javax.swing.JPasswordField jPasswordField17;
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JPasswordField jPasswordField3;
     private javax.swing.JPasswordField jPasswordField4;
     private javax.swing.JPasswordField jPasswordField5;
     private javax.swing.JPasswordField jPasswordField6;
-    private javax.swing.JPasswordField jPasswordField7;
     private javax.swing.JPasswordField jPasswordField8;
     private javax.swing.JPasswordField jPasswordField9;
     private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
+    private javax.swing.JRadioButton jRadioButton11;
+    private javax.swing.JRadioButton jRadioButton12;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
@@ -3687,16 +3941,15 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JRadioButton jRadioButton7;
     private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
@@ -3715,8 +3968,8 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextArea jTextArea5;
-    private javax.swing.JTextArea jTextArea6;
+    private javax.swing.JTextArea jTextArea7;
+    private javax.swing.JTextArea jTextArea8;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
@@ -3738,20 +3991,13 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField26;
     private javax.swing.JTextField jTextField27;
     private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField29;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField32;
-    private javax.swing.JTextField jTextField33;
-    private javax.swing.JTextField jTextField34;
     private javax.swing.JTextField jTextField35;
     private javax.swing.JTextField jTextField36;
     private javax.swing.JTextField jTextField37;
     private javax.swing.JTextField jTextField38;
     private javax.swing.JTextField jTextField39;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField40;
     private javax.swing.JTextField jTextField41;
     private javax.swing.JTextField jTextField42;
     private javax.swing.JTextField jTextField43;
@@ -3762,6 +4008,15 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField48;
     private javax.swing.JTextField jTextField49;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField50;
+    private javax.swing.JTextField jTextField51;
+    private javax.swing.JTextField jTextField52;
+    private javax.swing.JTextField jTextField53;
+    private javax.swing.JTextField jTextField54;
+    private javax.swing.JTextField jTextField55;
+    private javax.swing.JTextField jTextField56;
+    private javax.swing.JTextField jTextField57;
+    private javax.swing.JTextField jTextField58;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;

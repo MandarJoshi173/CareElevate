@@ -256,6 +256,27 @@ public class LogicalCodeDAO {
             }
         });
     }
+    public void updatePatientProfile(String id,String password,String fullName,String emailId,String address,String ailment,String nationality,String description,String gender,String DOB,String contactNo){
+        template.execute(new HibernateCallback<Object>() {
+            @Override
+            public Object doInHibernate(Session session) throws HibernateException, SQLException {
+                PatientProfileTable patientprofiletable = (PatientProfileTable)session.get(PatientProfileTable.class,id);
+                patientprofiletable.setPatientId(id);
+                patientprofiletable.setFullName(fullName);
+                patientprofiletable.setPassword(password);
+                patientprofiletable.setEmailId(emailId);
+                patientprofiletable.setAddress(address);
+                patientprofiletable.setAilment(ailment);
+                patientprofiletable.setContactNo(contactNo);
+                patientprofiletable.setDescription(description);
+                patientprofiletable.setDob(DOB);
+                patientprofiletable.setGender(gender);
+                patientprofiletable.setNationality(nationality);
+                session.update(patientprofiletable);
+                return null;
+            }
+        });
+    }
     public void updateCanteenOperatorProfile(String id, String password){
         template.execute(new HibernateCallback<Object>() {
             @Override
@@ -264,6 +285,18 @@ public class LogicalCodeDAO {
                 canteenoperatorlogintable.setOperatorId(id);
                 canteenoperatorlogintable.setPassword(password);
                 session.update(canteenoperatorlogintable);
+                return null;
+            }
+        });
+    }
+    public void updatePharmacyOperatorProfile(String id, String password){
+        template.execute(new HibernateCallback<Object>() {
+            @Override
+            public Object doInHibernate(Session session) throws HibernateException, SQLException {
+                PharmacyOperatorLoginTable pharmacyoperatorlogintable = (PharmacyOperatorLoginTable)session.get(PharmacyOperatorLoginTable.class,id);
+                pharmacyoperatorlogintable.setOperatorId(id);
+                pharmacyoperatorlogintable.setPassword(password);
+                session.update(pharmacyoperatorlogintable);
                 return null;
             }
         });
