@@ -48,6 +48,8 @@
                 <value>spr/beans/FeedbackTable.hbm.xml</value>
                 <value>spr/beans/DoctorProfileTable.hbm.xml</value>
                 <value>spr/beans/AdminLoginTable.hbm.xml</value>
+                <value>spr/beans/CanteenOperatorLoginTable.hbm.xml</value>
+                <value>spr/beans/PharmacyOperatorLoginTable.hbm.xml</value>
             </list>
         </property>
     </bean>

@@ -250,7 +250,7 @@ public class Login extends javax.swing.JFrame {
             else if(post.equalsIgnoreCase("Canteen Operator")){
                 boolean result=dao.checkLogin(id,pass,post);
                 if(result){
-                    new NurseDashboard2().setVisible(true);
+                    new CanteenOperatorDashboard().setVisible(true);
                     this.dispose();
                 }
                 else{
@@ -260,7 +260,7 @@ public class Login extends javax.swing.JFrame {
             else if(post.equalsIgnoreCase("Pharmacy Operator")){
                 boolean result=dao.checkLogin(id,pass,post);
                 if(result){
-                    new NurseDashboard2().setVisible(true);
+                    new PharmacyOperatorDashboard().setVisible(true);
                     this.dispose();
                 }
                 else{

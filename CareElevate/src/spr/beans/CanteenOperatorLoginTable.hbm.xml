@@ -1,0 +1,10 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="spr.beans">
+    <class name="CanteenOperatorLoginTable" table="canteenoperatorlogintable">
+        <id name="operatorId" column="operatorId"/>
+        <property name="password" column="password"/>
+    </class>
+</hibernate-mapping>
