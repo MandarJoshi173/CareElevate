@@ -221,6 +221,14 @@ public class LogicalCodeDAO {
         List<CanteenOperatorTable>list=template.find("from CanteenOperatorTable");
         return list;
     }
+    public List getFoodOrders(){
+        List<FoodMenu>list=template.find("from FoodMenu");
+        return list;
+    }
+    public List getMedicineOrders(){
+        List<MedicineMenu>list=template.find("from MedicineMenu");
+        return list;
+    }
     public List getMedicineMenu(){
         List<PharmacyOperatorTable>list=template.find("from PharmacyOperatorTable");
         return list;
@@ -339,6 +347,28 @@ public class LogicalCodeDAO {
                 FeedbackTable feedbacktable=(FeedbackTable)session.get(FeedbackTable.class,id);
                 feedbacktable.setStatus(newStatus);
                 session.update(feedbacktable);
+                return null;
+            }
+        });
+    }
+    public void updateFoodOrderStatus(int id,String newStatus){
+        template.execute(new HibernateCallback<Object>() {
+            @Override
+            public Object doInHibernate(Session session) throws HibernateException, SQLException {
+                FoodMenu foodmenu =(FoodMenu)session.get(FoodMenu.class,id);
+                foodmenu.setStatus(newStatus);
+                session.update(foodmenu);
+                return null;
+            }
+        });
+    }
+    public void updateMedicineOrderStatus(int id,String newStatus){
+        template.execute(new HibernateCallback<Object>() {
+            @Override
+            public Object doInHibernate(Session session) throws HibernateException, SQLException {
+                MedicineMenu medicinemenu=(MedicineMenu)session.get(MedicineMenu.class,id);
+                medicinemenu.setOrderStatus(newStatus);
+                session.update(medicinemenu);
                 return null;
             }
         });

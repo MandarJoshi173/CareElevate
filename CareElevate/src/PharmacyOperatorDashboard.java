@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import spr.beans.CanteenOperatorTable;
+import spr.beans.MedicineMenu;
 import spr.beans.PharmacyOperatorTable;
 import spr.hib.dao.LogicalCodeDAO;
 
@@ -39,6 +39,12 @@ public class PharmacyOperatorDashboard extends javax.swing.JFrame {
             Object obj[]={data.getItemId(),data.getItemName(),data.getPrice()};
             dtm.addRow(obj);
         }
+        List<MedicineMenu> list2=dao.getMedicineOrders();
+        DefaultTableModel dtm2=(DefaultTableModel)jTable3.getModel();
+        for(MedicineMenu data:list2){
+            Object obj[]={data.getMedId(),data.getMedicineName(),data.getQuantity(),data.getPatientId(),data.getCost(),data.getWardNo(),data.getOrderStatus()};
+            dtm2.addRow(obj);
+        }
     }
 
     /**
@@ -56,7 +62,13 @@ public class PharmacyOperatorDashboard extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jPanel13 = new javax.swing.JPanel();
-        jPanel14 = new javax.swing.JPanel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jPanel17 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jLabel22 = new javax.swing.JLabel();
+        jTextField11 = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel7 = new javax.swing.JPanel();
@@ -128,10 +140,59 @@ public class PharmacyOperatorDashboard extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jTabbedPane4.addTab("VIEW PATIENT ORDERS", jPanel13);
 
-        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jTabbedPane4.addTab("UPDATE ORDER STATUS", jPanel14);
+        jScrollPane10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "MED ID", "MEDICINE NAME", "QUANTITY", "PATIENT ID", "COST", "WARD NO", "STATUS"
+            }
+        ));
+        jScrollPane10.setViewportView(jTable3);
+
+        jPanel13.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 310));
+
+        jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel15.setText("UPDATE ORDER STATUS FORM");
+        jLabel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel17.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, -1, -1));
+
+        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton5.setText("UPDATE");
+        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel17.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 60, 130, -1));
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel22.setText("ENTER ORDER ID:");
+        jPanel17.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, -1, -1));
+
+        jTextField11.setText("ENTER ORDER ID HERE\n");
+        jTextField11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField11MouseClicked(evt);
+            }
+        });
+        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField11ActionPerformed(evt);
+            }
+        });
+        jPanel17.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, 210, 30));
+
+        jPanel13.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 1280, 100));
+
+        jTabbedPane4.addTab("VIEW PATIENT ORDERS", jPanel13);
 
         jPanel3.add(jTabbedPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 560));
 
@@ -601,6 +662,26 @@ public class PharmacyOperatorDashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        ApplicationContext context = new ClassPathXmlApplicationContext("/SpringXmlConfig.xml");
+        LogicalCodeDAO dao = (LogicalCodeDAO)context.getBean("firstStep");
+        int id=Integer.parseInt(jTextField11.getText());
+        String status="Recieved";
+        dao.updateMedicineOrderStatus(id,status);
+        JOptionPane.showMessageDialog(this,"Record Updated Successfully");
+        new PharmacyOperatorDashboard().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jTextField11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField11MouseClicked
+        jTextField11.setText("");
+        jTextField11.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField11MouseClicked
+
+    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField11ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -621,6 +702,7 @@ public class PharmacyOperatorDashboard extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -632,10 +714,12 @@ public class PharmacyOperatorDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel134;
     private javax.swing.JLabel jLabel135;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -657,9 +741,9 @@ public class PharmacyOperatorDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -668,12 +752,15 @@ public class PharmacyOperatorDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField6;
