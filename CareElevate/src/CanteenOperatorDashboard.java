@@ -1,7 +1,15 @@
 
+import java.awt.Color;
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import spr.beans.CanteenOperatorTable;
+import spr.beans.FeedbackTable;
+import spr.hib.dao.LogicalCodeDAO;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -22,6 +30,15 @@ public class CanteenOperatorDashboard extends javax.swing.JFrame {
         Date date = new Date();
         DateFormat df = DateFormat.getDateInstance(DateFormat.FULL);
         jLabel8.setText(df.format(date));
+        jPanel48.setVisible(false);
+        ApplicationContext context = new ClassPathXmlApplicationContext("/SpringXmlConfig.xml");
+        LogicalCodeDAO dao=(LogicalCodeDAO)context.getBean("firstStep");
+        List<CanteenOperatorTable> list=dao.getFoodMenu();
+        DefaultTableModel dtm=(DefaultTableModel)jTable2.getModel();
+        for(CanteenOperatorTable data:list){
+            Object obj[]={data.getItemId(),data.getItemName(),data.getPrice()};
+            dtm.addRow(obj);
+        }
     }
 
     /**
@@ -43,8 +60,38 @@ public class CanteenOperatorDashboard extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel7 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel48 = new javax.swing.JPanel();
+        jLabel127 = new javax.swing.JLabel();
+        jLabel134 = new javax.swing.JLabel();
+        jLabel128 = new javax.swing.JLabel();
+        jLabel135 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
+        jPanel16 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -92,23 +139,220 @@ public class CanteenOperatorDashboard extends javax.swing.JFrame {
 
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1280, Short.MAX_VALUE)
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 529, Short.MAX_VALUE)
-        );
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel12.setText("FOOD MENU INSERTION FORM");
+        jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel12.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel10.setText("ENTER ITEM NAME:\n");
+        jPanel12.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, -1, -1));
+
+        jTextField2.setText("ENTER FOOD ITEM NAME HERE\n");
+        jTextField2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField2MouseClicked(evt);
+            }
+        });
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        jPanel12.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 410, -1));
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setText("SUBMIT");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel12.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel11.setText("ENTER PRICE:");
+        jPanel12.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, -1, -1));
+
+        jTextField3.setText("ENTER PRICE HERE\n");
+        jTextField3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField3MouseClicked(evt);
+            }
+        });
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+        jPanel12.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, 410, -1));
+
+        jPanel7.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 480));
 
         jTabbedPane2.addTab("CREATE FOOD MENU", jPanel7);
 
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ITEM ID", "ITEM NAME", "PRICE"
+            }
+        ));
+        jScrollPane9.setViewportView(jTable2);
+
+        jPanel15.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 560));
+
+        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel48.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel48.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel127.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel127.setText("ITEM NAME:");
+        jPanel48.add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+
+        jLabel134.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel134.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel48.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 140, 20));
+
+        jLabel128.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel128.setText("PRICE:");
+        jPanel48.add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, 60, -1));
+
+        jLabel135.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel135.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel48.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, 140, 20));
+
+        jPanel8.add(jPanel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 570, 60));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel9.setText("SEARCH A PARTICULAR FOOD ITEM");
+        jPanel8.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel13.setText("ENTER ITEM ID:");
+        jPanel8.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, -1));
+
+        jTextField1.setText("ENTER ID OF A PARTICULAR FOOD ITEM");
+        jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField1MouseClicked(evt);
+            }
+        });
+        jPanel8.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 320, -1));
+
+        jButton2.setText("SEARCH");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 50, 70, 20));
+
+        jPanel15.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 0, 570, 560));
+
+        jPanel5.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, -1));
+
         jTabbedPane2.addTab("VIEW FOOD MENU", jPanel5);
 
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel14.setText("FOOD MENU UPDATION FORM");
+        jLabel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel16.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, -1, -1));
+
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton3.setText("UPDATE");
+        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel16.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 250, 130, -1));
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel17.setText("ENTER NEW ITEM NAME:\n");
+        jPanel16.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, -1, -1));
+
+        jTextField6.setText("ENTER FOOD ITEM NAME HERE\n");
+        jTextField6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField6MouseClicked(evt);
+            }
+        });
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+        jPanel16.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 250, -1));
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel18.setText("ENTER NEW PRICE:");
+        jPanel16.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 180, -1));
+
+        jTextField7.setText("ENTER PRICE HERE\n");
+        jTextField7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField7MouseClicked(evt);
+            }
+        });
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+        jPanel16.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, 250, -1));
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel19.setText("ENTER ITEM ID:");
+        jPanel16.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, -1, -1));
+
+        jTextField8.setText("ENTER FOOD ITEM NAME HERE\n");
+        jTextField8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField8MouseClicked(evt);
+            }
+        });
+        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField8ActionPerformed(evt);
+            }
+        });
+        jPanel16.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, 210, -1));
+
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton4.setText("GET");
+        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel16.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 60, 90, -1));
+
+        jPanel6.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 480));
+
         jTabbedPane2.addTab("UPDATE FOOD MENU", jPanel6);
 
         jPanel4.add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 560));
@@ -246,6 +490,108 @@ public class CanteenOperatorDashboard extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jLabel4MouseClicked
 
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        jTextField2.setText("");
+        jTextField2.setForeground(Color.GRAY);
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        ApplicationContext context = new ClassPathXmlApplicationContext("/SpringXmlConfig.xml");
+        LogicalCodeDAO dao=(LogicalCodeDAO)context.getBean("firstStep");
+        String itemName=jTextField2.getText();
+        String price=jTextField3.getText();
+        CanteenOperatorTable canteenoperatortable=new CanteenOperatorTable(itemName, price);
+        dao.insertFoodMenuRecord(canteenoperatortable);
+        JOptionPane.showMessageDialog(this,"Record inserted successfully");
+        new CanteenOperatorDashboard().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        jTextField3.setText("");
+        jTextField3.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
+        jTextField2.setText("");
+        jTextField2.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField2MouseClicked
+
+    private void jTextField3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField3MouseClicked
+        jTextField3.setText("");
+        jTextField3.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField3MouseClicked
+
+    private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
+        jTextField1.setText("");
+        jTextField1.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField1MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        ApplicationContext context = new ClassPathXmlApplicationContext("/SpringXmlConfig.xml");
+        LogicalCodeDAO dao=(LogicalCodeDAO)context.getBean("firstStep");
+        int id=Integer.parseInt(jTextField1.getText());
+        List<CanteenOperatorTable> list=dao.getFoodItem(id);
+        for(CanteenOperatorTable data:list){
+            jLabel134.setText(data.getItemName());
+            jLabel135.setText(data.getPrice());
+            jPanel48.setVisible(true);
+        }
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        ApplicationContext context = new ClassPathXmlApplicationContext("/SpringXmlConfig.xml");
+        LogicalCodeDAO dao=(LogicalCodeDAO)context.getBean("firstStep");
+        int id=Integer.parseInt(jTextField8.getText());
+        String newItemName=jTextField6.getText();
+        String newPrice=jTextField7.getText();
+        dao.updateFoodMenu(id,newItemName,newPrice);
+        JOptionPane.showMessageDialog(this,"Record Updated Successfully");
+        new CanteenOperatorDashboard().setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextField6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField6MouseClicked
+        jTextField6.setText("");
+        jTextField6.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField6MouseClicked
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jTextField7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField7MouseClicked
+        jTextField7.setText("");
+        jTextField7.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField7MouseClicked
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jTextField8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField8MouseClicked
+        jTextField8.setText("");
+        jTextField8.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jTextField8MouseClicked
+
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        ApplicationContext context = new ClassPathXmlApplicationContext("/SpringXmlConfig.xml");
+        LogicalCodeDAO dao = (LogicalCodeDAO)context.getBean("firstStep");
+        int id=Integer.parseInt(jTextField8.getText());
+        List<CanteenOperatorTable>list=dao.getFoodItem(id);
+        for(CanteenOperatorTable data:list){
+            jTextField6.setText(data.getItemName());
+            jTextField7.setText(data.getPrice());
+        }
+
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -256,14 +602,30 @@ public class CanteenOperatorDashboard extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PharmacyOperatorDashboard().setVisible(true);
+                new CanteenOperatorDashboard().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel127;
+    private javax.swing.JLabel jLabel128;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel134;
+    private javax.swing.JLabel jLabel135;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -271,6 +633,7 @@ public class CanteenOperatorDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -283,16 +646,29 @@ public class CanteenOperatorDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel48;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane4;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
 }

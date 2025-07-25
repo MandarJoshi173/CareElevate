@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="spr.beans">
+    <class name="CanteenOperatorTable" table="canteenoperatortable">
+        <id name="itemId">
+            <generator class="native"/>
+        </id>
+        <property name="itemName" column="itemName"/>
+        <property name="price" column="price"/>
+    </class>
+    
+</hibernate-mapping>

@@ -50,6 +50,8 @@
                 <value>spr/beans/AdminLoginTable.hbm.xml</value>
                 <value>spr/beans/CanteenOperatorLoginTable.hbm.xml</value>
                 <value>spr/beans/PharmacyOperatorLoginTable.hbm.xml</value>
+                <value>spr/beans/CanteenOperatorTable.hbm.xml</value>
+                <value>spr/beans/PharmacyOperatorTable.hbm.xml</value>
             </list>
         </property>
     </bean>

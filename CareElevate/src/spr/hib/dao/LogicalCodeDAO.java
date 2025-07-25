@@ -8,12 +8,13 @@ import org.springframework.orm.hibernate3.HibernateCallback;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 import spr.beans.AdminLoginTable;
 import spr.beans.CanteenOperatorLoginTable;
+import spr.beans.CanteenOperatorTable;
 import spr.beans.DoctorProfileTable;
 import spr.beans.FeedbackTable;
-import spr.beans.FoodMenu;
 import spr.beans.NurseProfileTable;
 import spr.beans.PatientProfileTable;
 import spr.beans.PharmacyOperatorLoginTable;
+import spr.beans.PharmacyOperatorTable;
 
 public class LogicalCodeDAO {
     private HibernateTemplate template;
@@ -186,6 +187,12 @@ public class LogicalCodeDAO {
     public void insertPatientFeedback(FeedbackTable feedbacktable){
         template.save(feedbacktable);
     }
+    public void insertFoodMenuRecord(CanteenOperatorTable canteenoperatortable){
+        template.save(canteenoperatortable);
+    }
+    public void insertMedicineMenuRecord(PharmacyOperatorTable pharmacyoperatortable){
+        template.save(pharmacyoperatortable);
+    }
     public List getDoctorProfileInfo(String id){
         List<DoctorProfileTable>list=template.find("from DoctorProfileTable where doctorId=?",id);
         return list;
@@ -200,6 +207,18 @@ public class LogicalCodeDAO {
     }
     public List getAllNurseProfiles(){
         List<NurseProfileTable>list=template.find("from NurseProfileTable");
+        return list;
+    }
+    public List getFoodMenu(){
+        List<CanteenOperatorTable>list=template.find("from CanteenOperatorTable");
+        return list;
+    }
+    public List getFoodItem(int id) {
+        List<CanteenOperatorTable>list=template.find("from CanteenOperatorTable where itemId=?",id);
+        return list;
+    }
+    public List getMedicineItem(int id) {
+        List<PharmacyOperatorTable>list=template.find("from PharmacyOperatorTable where itemId=?",id);
         return list;
     }
     public List getPatientProfileInfo(String id) {
@@ -277,12 +296,12 @@ public class LogicalCodeDAO {
             }
         });
     }
-    public void updateCanteenOperatorProfile(String id, String password){
+    public void updateCanteenOperatorProfile(String oldid, String password){
         template.execute(new HibernateCallback<Object>() {
             @Override
             public Object doInHibernate(Session session) throws HibernateException, SQLException {
-                CanteenOperatorLoginTable canteenoperatorlogintable = (CanteenOperatorLoginTable)session.get(CanteenOperatorLoginTable.class,id);
-                canteenoperatorlogintable.setOperatorId(id);
+                CanteenOperatorLoginTable canteenoperatorlogintable = (CanteenOperatorLoginTable)session.get(CanteenOperatorLoginTable.class,oldid);
+                canteenoperatorlogintable.setOperatorId(oldid);
                 canteenoperatorlogintable.setPassword(password);
                 session.update(canteenoperatorlogintable);
                 return null;
@@ -308,6 +327,29 @@ public class LogicalCodeDAO {
                 FeedbackTable feedbacktable=(FeedbackTable)session.get(FeedbackTable.class,id);
                 feedbacktable.setStatus(newStatus);
                 session.update(feedbacktable);
+                return null;
+            }
+        });
+    }
+    public void updateFoodMenu(int id,String itemName,String price){
+        template.execute(new HibernateCallback<Object>() {
+            @Override
+            public Object doInHibernate(Session session) throws HibernateException, SQLException {
+                CanteenOperatorTable canteenoperatortable = (CanteenOperatorTable)session.get(CanteenOperatorTable.class,id);
+                canteenoperatortable.setItemName(itemName);
+                canteenoperatortable.setPrice(price);
+                return null;
+            }
+        });
+    }
+    public void updateMedicineMenu(int id,String itemName,String price){
+        template.execute(new HibernateCallback<Object>() {
+            @Override
+            public Object doInHibernate(Session session) throws HibernateException, SQLException {
+                PharmacyOperatorTable pharmacyoperatortable = (PharmacyOperatorTable)session.get(PharmacyOperatorTable.class,id);
+                pharmacyoperatortable.setItemName(itemName);
+                pharmacyoperatortable.setPrice(price);
+                session.update(pharmacyoperatortable);
                 return null;
             }
         });

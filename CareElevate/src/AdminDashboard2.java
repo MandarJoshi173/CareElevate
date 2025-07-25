@@ -409,8 +409,6 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         jTextField37 = new javax.swing.JTextField();
         jPasswordField10 = new javax.swing.JPasswordField();
         jButton10 = new javax.swing.JButton();
-        jLabel183 = new javax.swing.JLabel();
-        jTextField49 = new javax.swing.JTextField();
         jLabel184 = new javax.swing.JLabel();
         jPasswordField15 = new javax.swing.JPasswordField();
         jPanel34 = new javax.swing.JPanel();
@@ -2241,7 +2239,7 @@ public class AdminDashboard2 extends javax.swing.JFrame {
 
         jLabel83.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel83.setText("CANTEEN OPERATOR OLD PASSWORD:");
-        jPanel36.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        jPanel36.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
         jTextField37.setText("ENTER CANTEEN OPERATOR  OLD ID HERE");
         jTextField37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -2265,7 +2263,7 @@ public class AdminDashboard2 extends javax.swing.JFrame {
                 jPasswordField10MouseClicked(evt);
             }
         });
-        jPanel36.add(jPasswordField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 220, 30));
+        jPanel36.add(jPasswordField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 220, 30));
 
         jButton10.setText("<html>\n<h2>UPDATE</h2>\n</html>");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -2273,29 +2271,11 @@ public class AdminDashboard2 extends javax.swing.JFrame {
                 jButton10ActionPerformed(evt);
             }
         });
-        jPanel36.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, 40));
-
-        jLabel183.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel183.setText("CANTEEN OPERATOR NEW ID:");
-        jPanel36.add(jLabel183, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 270, -1));
-
-        jTextField49.setText("ENTER CANTEEN OPERATOR NEW ID HERE");
-        jTextField49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField49.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField49MouseClicked(evt);
-            }
-        });
-        jTextField49.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField49ActionPerformed(evt);
-            }
-        });
-        jPanel36.add(jTextField49, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 280, 30));
+        jPanel36.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, -1, 40));
 
         jLabel184.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel184.setText("CANTEEN OPERATOR NEW PASSWORD:");
-        jPanel36.add(jLabel184, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+        jPanel36.add(jLabel184, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
         jPasswordField15.setText("ENTER NEW PASSWORD HERE");
         jPasswordField15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -2305,7 +2285,7 @@ public class AdminDashboard2 extends javax.swing.JFrame {
                 jPasswordField15MouseClicked(evt);
             }
         });
-        jPanel36.add(jPasswordField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 220, 30));
+        jPanel36.add(jPasswordField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 220, 30));
 
         jPanel33.add(jPanel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 530));
 
@@ -2998,12 +2978,11 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         ApplicationContext context = new ClassPathXmlApplicationContext("/SpringXmlConfig.xml");
         LogicalCodeDAO dao=(LogicalCodeDAO)context.getBean("firstStep");
         String oldId=jTextField37.getText();
-        String newId=jTextField49.getText();
         String oldPassword=new String(jPasswordField10.getPassword());
         String newPassword=new String(jPasswordField15.getPassword());
         boolean result=dao.checkCanteenOperatorLogin(oldId, oldPassword);
         if(result){
-            dao.updateCanteenOperatorProfile(newId,newPassword);
+            dao.updateCanteenOperatorProfile(oldId,newPassword);
             JOptionPane.showMessageDialog(this,"Profile Updated Successfully");
         }
         else{
@@ -3408,15 +3387,6 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField37ActionPerformed
 
-    private void jTextField49MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField49MouseClicked
-        jTextField49.setText("");
-        jTextField49.setForeground(Color.BLACK);
-    }//GEN-LAST:event_jTextField49MouseClicked
-
-    private void jTextField49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField49ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField49ActionPerformed
-
     private void jPasswordField15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField15MouseClicked
         jPasswordField15.setText("");
         jPasswordField15.setEchoChar('*');
@@ -3442,12 +3412,12 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         ApplicationContext context = new ClassPathXmlApplicationContext("/SpringXmlConfig.xml");
         LogicalCodeDAO dao=(LogicalCodeDAO)context.getBean("firstStep");
         String oldId=jTextField37.getText();
-        String newId=jTextField49.getText();
+        
         String oldPassword=new String(jPasswordField10.getPassword());
         String newPassword=new String(jPasswordField15.getPassword());
         boolean result=dao.checkPharmacyOperatorLogin(oldId, oldPassword);
         if(result){
-            dao.updatePharmacyOperatorProfile(newId,newPassword);
+            dao.updatePharmacyOperatorProfile(oldId,newPassword);
             JOptionPane.showMessageDialog(this,"Profile Updated Successfully");
         }
         else{
@@ -3758,7 +3728,6 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel180;
     private javax.swing.JLabel jLabel181;
     private javax.swing.JLabel jLabel182;
-    private javax.swing.JLabel jLabel183;
     private javax.swing.JLabel jLabel184;
     private javax.swing.JLabel jLabel185;
     private javax.swing.JLabel jLabel186;
@@ -4006,7 +3975,6 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField46;
     private javax.swing.JTextField jTextField47;
     private javax.swing.JTextField jTextField48;
-    private javax.swing.JTextField jTextField49;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField50;
     private javax.swing.JTextField jTextField51;
