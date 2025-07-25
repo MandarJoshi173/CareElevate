@@ -162,7 +162,6 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel8 = new javax.swing.JPanel();
-        jScrollPane7 = new javax.swing.JScrollPane();
         jPanel44 = new javax.swing.JPanel();
         jLabel97 = new javax.swing.JLabel();
         jLabel98 = new javax.swing.JLabel();
@@ -460,14 +459,17 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
         jMenu7 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu8 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -894,9 +896,6 @@ public class AdminDashboard2 extends javax.swing.JFrame {
 
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jScrollPane7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel8.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 170));
-
         jPanel44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         jLabel97.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -1057,7 +1056,7 @@ public class AdminDashboard2 extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel8.add(jPanel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 1280, 350));
+        jPanel8.add(jPanel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 350));
 
         jTabbedPane3.addTab("VIEW PROFILE", jPanel8);
 
@@ -2572,69 +2571,64 @@ public class AdminDashboard2 extends javax.swing.JFrame {
 
         jPanel10.setBackground(new java.awt.Color(204, 204, 204));
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("COPYRIGHT @ 2025 CAREELEVATE PVT LTD ");
+        jPanel10.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(897, 36, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setText("COPYRIGHT @ 2025 CAREELEVATE PVT LTD\n");
-
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                .addContainerGap(895, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addContainerGap())
-            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel10Layout.createSequentialGroup()
-                    .addGap(16, 16, 16)
-                    .addComponent(jLabel3)
-                    .addContainerGap(889, Short.MAX_VALUE)))
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(27, 27, 27))
-            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                    .addContainerGap(44, Short.MAX_VALUE)
-                    .addComponent(jLabel3)
-                    .addGap(17, 17, 17)))
-        );
+        jPanel10.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 46, -1, -1));
 
         getContentPane().add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 1280, 90));
 
         jMenuBar1.setBorder(null);
 
-        jMenu1.setBorder(null);
-        jMenu1.setText("PROFILE");
-        jMenu1.setIconTextGap(9);
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setBorder(null);
-        jMenu2.setText("      SETTINGS     ");
-        jMenuBar1.add(jMenu2);
-
-        jMenu3.setText("HELP");
-        jMenuBar1.add(jMenu3);
-
-        jMenu4.setText("TOOLS");
-        jMenuBar1.add(jMenu4);
-
-        jMenu5.setText("WINDOWS");
-        jMenuBar1.add(jMenu5);
-
-        jMenu6.setText("VIEW");
-        jMenuBar1.add(jMenu6);
-
         jMenu7.setText("THEME");
+
+        jMenuItem1.setText("Light Mode ");
+        jMenu7.add(jMenuItem1);
+
+        jMenuItem2.setText("Dark Mode");
+        jMenu7.add(jMenuItem2);
+
         jMenuBar1.add(jMenu7);
 
         jMenu8.setText("SHOW  TABS");
+
+        jMenuItem3.setText("PATIENT PROFILE");
+        jMenuItem3.setNextFocusableComponent(jPanel3);
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem3);
+
+        jMenuItem4.setText("NURSE PROFILE");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem4);
+
+        jMenuItem5.setText("DOCTOR PROFILE");
+        jMenu8.add(jMenuItem5);
+
+        jMenuItem6.setText("FEEDBACKS");
+        jMenu8.add(jMenuItem6);
+
+        jMenuItem7.setText("ORDERS");
+        jMenu8.add(jMenuItem7);
+
+        jMenuItem8.setText("CANTEEN OPERATOR PROFILE");
+        jMenu8.add(jMenuItem8);
+
+        jMenuItem9.setText("PHARMACY OPERATOR PROFILE");
+        jMenu8.add(jMenuItem9);
+
         jMenuBar1.add(jMenu8);
 
         setJMenuBar(jMenuBar1);
@@ -3587,6 +3581,14 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         jTextArea8.setForeground(Color.BLACK);
     }//GEN-LAST:event_jTextArea8MouseClicked
 
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+      
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        jMenuItem4.setNextFocusableComponent(jPanel13);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3821,15 +3823,18 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -3919,7 +3924,6 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
