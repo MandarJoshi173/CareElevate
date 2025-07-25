@@ -4,16 +4,14 @@
 
 <hibernate-mapping package="spr.beans">
     <class name="FoodMenu" table="foodmenutable">
-        <id name="orderId">
-            <generator class="native"/>
-        </id>
+        <id name="orderId" column="orderId"/>
         <property name="foodName" column="FoodName"/>
         <property name="foodDescription" column="FoodDescription"/>
         <property name="patientId" column="patientId"/>
         <property name="cost" column="cost"/>
-        <property name="availability" column="Availability"/>
         <property name="wardNo" column="WardNo"/>
         <property name="status" column="Status"/>
+        <property name="quantity" column="quantity"/>
         
     </class>
     

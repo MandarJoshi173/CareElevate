@@ -3,32 +3,27 @@ public class MedicineMenu {
     private int medId;
     private String patientId;
     private String medicineName;
-    private String medicineDescription;
-    private String expiryDate;
+    private String quantity;
     private String cost;
-    private String availability;
     private String wardNo;
     private String orderStatus;
 
     public MedicineMenu() {
     }
 
-    public MedicineMenu(int medId, String patientId, String medicineName, String medicineDescription, String expiryDate, String cost, String availability, String wardNo, String orderStatus) {
+    public MedicineMenu(int medId, String patientId, String medicineName, String quantity, String cost, String wardNo, String orderStatus) {
         this.medId = medId;
         this.patientId = patientId;
         this.medicineName = medicineName;
-        this.medicineDescription = medicineDescription;
-        this.expiryDate = expiryDate;
+        this.quantity = quantity;
         this.cost = cost;
-        this.availability = availability;
         this.wardNo = wardNo;
         this.orderStatus = orderStatus;
     }
 
-    
     @Override
     public String toString() {
-        return medId + " " + patientId + " " + medicineName + " " + medicineDescription + " " + expiryDate + " " + cost + " " + availability + " " + wardNo + " " + orderStatus;
+        return  medId + "" + patientId + "" + medicineName + "" + quantity + "" + cost + "" + wardNo + "" + orderStatus;
     }
 
     public int getMedId() {
@@ -38,7 +33,6 @@ public class MedicineMenu {
     public void setMedId(int medId) {
         this.medId = medId;
     }
-    
 
     public String getPatientId() {
         return patientId;
@@ -56,20 +50,12 @@ public class MedicineMenu {
         this.medicineName = medicineName;
     }
 
-    public String getMedicineDescription() {
-        return medicineDescription;
+    public String getQuantity() {
+        return quantity;
     }
 
-    public void setMedicineDescription(String medicineDescription) {
-        this.medicineDescription = medicineDescription;
-    }
-
-    public String getExpiryDate() {
-        return expiryDate;
-    }
-
-    public void setExpiryDate(String expiryDate) {
-        this.expiryDate = expiryDate;
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
     }
 
     public String getCost() {
@@ -78,14 +64,6 @@ public class MedicineMenu {
 
     public void setCost(String cost) {
         this.cost = cost;
-    }
-
-    public String getAvailability() {
-        return availability;
-    }
-
-    public void setAvailability(String availability) {
-        this.availability = availability;
     }
 
     public String getWardNo() {
@@ -103,8 +81,6 @@ public class MedicineMenu {
     public void setOrderStatus(String orderStatus) {
         this.orderStatus = orderStatus;
     }
-    
-    
     
     
     

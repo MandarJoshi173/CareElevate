@@ -33,7 +33,7 @@ public class PharmacyOperatorDashboard extends javax.swing.JFrame {
         jPanel48.setVisible(false);
         ApplicationContext context = new ClassPathXmlApplicationContext("/SpringXmlConfig.xml");
         LogicalCodeDAO dao=(LogicalCodeDAO)context.getBean("firstStep");
-        List<PharmacyOperatorTable> list=dao.getFoodMenu();
+        List<PharmacyOperatorTable> list=dao.getMedicineMenu();
         DefaultTableModel dtm=(DefaultTableModel)jTable2.getModel();
         for(PharmacyOperatorTable data:list){
             Object obj[]={data.getItemId(),data.getItemName(),data.getPrice()};
@@ -611,7 +611,7 @@ public class PharmacyOperatorDashboard extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CanteenOperatorDashboard().setVisible(true);
+                new PharmacyOperatorDashboard().setVisible(true);
             }
         });
     }

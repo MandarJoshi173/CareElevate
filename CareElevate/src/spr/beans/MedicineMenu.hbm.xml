@@ -4,18 +4,13 @@
 
 <hibernate-mapping package="spr.beans">
     <class name="MedicineMenu" table="medicinemenutable">
-        <id name="medId">
-            <generator class="native"/>
-        </id>
+        <id name="medId" column="medId"/>
         <property name="patientId" column="patientId"/>
         <property name="medicineName" column="MedicineName"/>
-        <property name="medicineDescription" column="MedicineDescription"/>
-        <property name="expiryDate" column="ExpiryDate"/>
         <property name="cost" column="cost"/>
-        <property name="availability" column="Availability"/>
+        <property name="quantity" column="quantity"/>
         <property name="wardNo" column="WardNo"/>
         <property name="orderStatus" column="Status"/>
-        
     </class>
     
 </hibernate-mapping>

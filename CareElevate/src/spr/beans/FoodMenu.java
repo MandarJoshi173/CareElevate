@@ -5,28 +5,26 @@ public class FoodMenu {
     private String foodDescription;
     private String patientId;
     private String cost;
-    private String availability;
     private String wardNo;
     private String status;
-
+    private String quantity;
     public FoodMenu() {
     }
 
-    public FoodMenu(int orderId, String foodName, String foodDescription, String patientId, String cost, String availability, String wardNo, String status) {
+    public FoodMenu(int orderId, String foodName, String foodDescription, String patientId, String cost, String wardNo, String status, String quantity) {
         this.orderId = orderId;
         this.foodName = foodName;
         this.foodDescription = foodDescription;
         this.patientId = patientId;
         this.cost = cost;
-        this.availability = availability;
         this.wardNo = wardNo;
         this.status = status;
+        this.quantity = quantity;
     }
 
-    
     @Override
     public String toString() {
-        return  orderId + " " + foodName + " " + foodDescription + " " + patientId + " " + cost + " " + availability + " " + wardNo + " " + status;
+        return  orderId + "" + foodName + "" + foodDescription + "" + patientId + "" + cost + "" + wardNo + "" + status + "" + quantity;
     }
 
     public int getOrderId() {
@@ -36,8 +34,7 @@ public class FoodMenu {
     public void setOrderId(int orderId) {
         this.orderId = orderId;
     }
-    
-    
+
     public String getFoodName() {
         return foodName;
     }
@@ -70,14 +67,6 @@ public class FoodMenu {
         this.cost = cost;
     }
 
-    public String getAvailability() {
-        return availability;
-    }
-
-    public void setAvailability(String availability) {
-        this.availability = availability;
-    }
-
     public String getWardNo() {
         return wardNo;
     }
@@ -93,6 +82,18 @@ public class FoodMenu {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+    
+    
+    
+    
     
     
 }

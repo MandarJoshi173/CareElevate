@@ -11,6 +11,8 @@ import spr.beans.CanteenOperatorLoginTable;
 import spr.beans.CanteenOperatorTable;
 import spr.beans.DoctorProfileTable;
 import spr.beans.FeedbackTable;
+import spr.beans.FoodMenu;
+import spr.beans.MedicineMenu;
 import spr.beans.NurseProfileTable;
 import spr.beans.PatientProfileTable;
 import spr.beans.PharmacyOperatorLoginTable;
@@ -166,6 +168,12 @@ public class LogicalCodeDAO {
     public void insertPharmacyOperatorProfile(PharmacyOperatorLoginTable pharmacyoperatorlogintable){
         template.save(pharmacyoperatorlogintable);
     }
+    public void insertFoodOrder(FoodMenu foodmenu){
+        template.save(foodmenu);
+    }
+    public void insertMedicineOrder(MedicineMenu medicinemenu){
+        template.save(medicinemenu);
+    }
     public void deletePatientProfile(String id,String pwd){
         List<PatientProfileTable> recor = template.find("from PatientProfileTable where patientId=? and password=?",id,pwd);
         for(PatientProfileTable data:recor){
@@ -211,6 +219,10 @@ public class LogicalCodeDAO {
     }
     public List getFoodMenu(){
         List<CanteenOperatorTable>list=template.find("from CanteenOperatorTable");
+        return list;
+    }
+    public List getMedicineMenu(){
+        List<PharmacyOperatorTable>list=template.find("from PharmacyOperatorTable");
         return list;
     }
     public List getFoodItem(int id) {
