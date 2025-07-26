@@ -12,6 +12,8 @@ import spr.beans.DoctorProfileTable;
 import spr.beans.NurseProfileTable;
 import spr.beans.CanteenOperatorLoginTable;
 import spr.beans.FeedbackTable;
+import spr.beans.FoodMenu;
+import spr.beans.MedicineMenu;
 import spr.beans.PatientProfileTable;
 import spr.beans.PharmacyOperatorLoginTable;
 import spr.hib.dao.LogicalCodeDAO;
@@ -70,6 +72,20 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         for(FeedbackTable data:list4){
             Object obj4[]={data.getFeedbackId(),data.getFullName(),data.getFeedback(),data.getStatus()};
             dtm4.addRow(obj4);
+        }
+        //Show all patient food orders
+        List<FoodMenu> list5=dao.getFoodOrders();
+        DefaultTableModel dtm5=(DefaultTableModel)jTable5.getModel();
+        for(FoodMenu data:list5){
+            Object obj4[]={data.getOrderId(),data.getFoodName(),data.getFoodDescription(),data.getPatientId(),data.getCost(),data.getWardNo(),data.getStatus()};
+            dtm5.addRow(obj4);
+        }
+        //Show all patient medicine orders
+        List<MedicineMenu> list6=dao.getMedicineOrders();
+        DefaultTableModel dtm6=(DefaultTableModel)jTable6.getModel();
+        for(MedicineMenu data:list6){
+            Object obj4[]={data.getMedId(),data.getMedicineName(),data.getQuantity(),data.getPatientId(),data.getCost(),data.getWardNo(),data.getOrderStatus()};
+            dtm6.addRow(obj4);
         }
     }
 
@@ -389,7 +405,11 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jTabbedPane5 = new javax.swing.JTabbedPane();
         jPanel18 = new javax.swing.JPanel();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        jTable5 = new javax.swing.JTable();
         jPanel19 = new javax.swing.JPanel();
+        jScrollPane16 = new javax.swing.JScrollPane();
+        jTable6 = new javax.swing.JTable();
         jPanel30 = new javax.swing.JPanel();
         jTabbedPane6 = new javax.swing.JTabbedPane();
         jPanel32 = new javax.swing.JPanel();
@@ -2161,9 +2181,39 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ORDER ID", "FOOD NAME", "FOOD DESCRIPTION", "PATIENT ID", "COST", "WARD NO", "STATUS"
+            }
+        ));
+        jScrollPane15.setViewportView(jTable5);
+
+        jPanel18.add(jScrollPane15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 410));
+
         jTabbedPane5.addTab("FOOD ORDERS", jPanel18);
 
         jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "MED ID", "MEDICINE NAME", "QUANTITY", "PATIENT ID", "COST", "WARD NO", "STATUS"
+            }
+        ));
+        jScrollPane16.setViewportView(jTable6);
+
+        jPanel19.add(jScrollPane16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 450));
+
         jTabbedPane5.addTab("MEDICINE ORDERS", jPanel19);
 
         jPanel2.add(jTabbedPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 650));
@@ -2586,8 +2636,19 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         jMenuBar1.setBorder(null);
 
         jMenu7.setText("THEME");
+        jMenu7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu7ActionPerformed(evt);
+            }
+        });
 
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_LEFT, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem1.setText("Light Mode ");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu7.add(jMenuItem1);
 
         jMenuItem2.setText("Dark Mode");
@@ -2596,7 +2657,13 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         jMenuBar1.add(jMenu7);
 
         jMenu8.setText("SHOW  TABS");
+        jMenu8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu8ActionPerformed(evt);
+            }
+        });
 
+        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem3.setText("PATIENT PROFILE");
         jMenuItem3.setNextFocusableComponent(jPanel3);
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
@@ -3589,6 +3656,18 @@ public class AdminDashboard2 extends javax.swing.JFrame {
         jMenuItem4.setNextFocusableComponent(jPanel13);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
+    private void jMenu7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu7ActionPerformed
+        
+    }//GEN-LAST:event_jMenu7ActionPerformed
+
+    private void jMenu8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu8ActionPerformed
+        jTabbedPane1.setSelectedIndex(0);
+    }//GEN-LAST:event_jMenu8ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3921,6 +4000,8 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
+    private javax.swing.JScrollPane jScrollPane16;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -3937,6 +4018,8 @@ public class AdminDashboard2 extends javax.swing.JFrame {
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
+    private javax.swing.JTable jTable5;
+    private javax.swing.JTable jTable6;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;

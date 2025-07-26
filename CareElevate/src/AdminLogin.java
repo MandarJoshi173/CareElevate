@@ -193,7 +193,7 @@ public class AdminLogin extends javax.swing.JFrame {
         else{
             boolean result = dao.checkAdminLogin(id,password);
             if(result){
-                new AdminDashboard().setVisible(true);
+                new AdminDashboard2().setVisible(true);
                 this.dispose();
             }
             else{
